@@ -1,0 +1,64 @@
+from abc import ABC, abstractmethod
+
+class MatrixFactory(ABC):
+    @abstractmethod
+    def create_matrix(self, rows, columns):
+        pass
+
+    @abstractmethod
+    def multiply(self, matrix1, matrix2):
+        pass
+
+
+class RegularMatrix:
+    def __init__(self, rows, columns):
+        self.rows = rows
+        self.columns = columns
+        self.data = [[0 for _ in range(columns)] for _ in range(rows)]
+
+    def __str__(self):
+        return "\n".join([" ".join(map(str, row)) for row in self.data])
+
+class IdentityMatrix:
+    def __init__(self, size):
+        self.size = size
+        self.data = [[1 if i == j else 0 for j in range(size)] for i in range(size)]
+
+    def __str__(self):
+        return "\n".join([" ".join(map(str, row)) for row in self.data])
+
+
+class RegularMatrixFactory(MatrixFactory):
+    def create_matrix(self, rows, columns):
+        return RegularMatrix(rows, columns)
+
+    def multiply(self, matrix1, matrix2):
+        # Implementar la multiplicación de matrices regulares
+        pass
+
+class IdentityMatrixFactory(MatrixFactory):
+    def create_matrix(self, size):
+        return IdentityMatrix(size)
+
+    def multiply(self, matrix1, matrix2):
+        # Implementar la multiplicación de matrices por la identidad
+        pass
+
+
+
+def perform_matrix_operations(factory, size):
+    matrix1 = factory.create_matrix(size, size)
+    matrix2 = factory.create_matrix(size, size)
+    print(f"Matrix 1 (Size {size}x{size}):\n{matrix1}")
+    print(f"Matrix 2 (Size {size}x{size}):\n{matrix2}")
+
+    result = factory.multiply(matrix1, matrix2)
+    print(f"Result of matrix multiplication:\n{result}")
+
+# Uso de fábricas concretas para matrices regulares e identidad
+regular_factory = RegularMatrixFactory()
+identity_factory = IdentityMatrixFactory()
+
+perform_matrix_operations(regular_factory, 3)
+perform_matrix_operations(identity_factory, 4)
+
