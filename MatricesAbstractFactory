@@ -37,7 +37,7 @@ class RegularMatrixFactory(MatrixFactory):
         pass
 
 class IdentityMatrixFactory(MatrixFactory):
-    def create_matrix(self, size):
+    def create_matrix(self, size, columns=None):
         return IdentityMatrix(size)
 
     def multiply(self, matrix1, matrix2):
