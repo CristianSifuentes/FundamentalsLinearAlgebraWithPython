@@ -1,3 +1,12 @@
+'''
+Este código crea dos vectores, los suma y luego utiliza Matplotlib para visualizar los vectores y 
+la suma de ellos en un gráfico bidimensional. 
+Puedes adaptar y ampliar este ejemplo para representar otros conceptos de álgebra lineal, 
+como transformaciones, multiplicación de matrices, etc. Matplotlib proporciona una amplia 
+gama de funciones de visualización para ayudarte a mostrar gráficamente los conceptos matemáticos.
+
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 
