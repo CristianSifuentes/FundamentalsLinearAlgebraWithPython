@@ -1,3 +1,10 @@
+
+'''
+Claro, a continuación, te proporciono un ejemplo simple en Python utilizando la biblioteca 
+NumPy para trabajar con tensores. En este caso, representaremos un tensor tridimensional y 
+realizaremos algunas operaciones básicas:
+'''
+
 import numpy as np
 
 # Crear un tensor tridimensional (3x3x3)
@@ -19,3 +26,17 @@ tensor_product = tensor_3d * 2
 # Imprimir resultados de operaciones
 print("\nTensor 3D + 10:\n", tensor_sum)
 print("\nTensor 3D * 2:\n", tensor_product)
+
+
+'''
+En este ejemplo, tensor_3d es un tensor tridimensional de tamaño 3x3x3. 
+Realizamos algunas operaciones básicas, como acceder a elementos 
+específicos y realizar operaciones de suma y multiplicación con escalares.
+
+Recuerda que, en el contexto del aprendizaje automático, 
+los tensores suelen representar datos de dimensiones superiores, 
+como imágenes en color (3D) o secuencias temporales (2D) 
+para procesamiento de lenguaje natural. NumPy y bibliotecas 
+de aprendizaje automático como TensorFlow y PyTorch son 
+herramientas poderosas para trabajar con tensores en Python.
+'''
