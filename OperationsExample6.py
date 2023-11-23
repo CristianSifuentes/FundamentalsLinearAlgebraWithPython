@@ -37,5 +37,9 @@ print("\nTranspuesta de la Matriz Original:\n", transpuesta_original)
 print("\nTransposición de la Transpuesta:\n", transposicion_transpuesta)
 
 '''
+Se calcula el producto de las matrices (AB)^T = (B)^T + (A)^T
+
+Se exploran dos variantes adicionales: transponer después del producto original y transponer antes de realizar el producto. Estas variantes demuestran que el orden de la transposición afecta el resultado final.
+Se incluye un ejercicio adicional que muestra la transposición de una transposición, confirmando que la transposición de una transposición devuelve la matriz original.
 
 '''
