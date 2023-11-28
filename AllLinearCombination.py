@@ -7,6 +7,7 @@ def graficar_combinaciones_lineales(v1, v2):
     for c1 in range(-10, 11):
         for c2 in range(-10, 11):
             combinacion_lineal = c1 * v1 + c2 * v2
+            print(combinacion_lineal)
             plt.quiver(0, 0, combinacion_lineal[0], combinacion_lineal[1], angles='xy', scale_units='xy', scale=1, color='b', alpha=0.3)
 
     # Configuraciones adicionales
