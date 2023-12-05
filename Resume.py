@@ -93,6 +93,14 @@ resta_matriz = A - B
 multiplicacion_escalar_matriz = c * A
 producto_matrices = np.dot(A, B)
 
+# Transposición de la multiplicación de matrices
+transposed_product_AB = producto_matrices.T
+
+# Multiplicación de matrices transpuestas
+transposed_BA = np.dot(B.T, A.T)
+
+
+
 # Operación de Transposición
 transpuesta_A = A.T
 transpuesta_B = B.T
@@ -143,6 +151,10 @@ print("¿La propiedad es distributiva?", np.allclose(left_distributive, right_di
 print(f"A · B:\n{product_AB}")
 print(f"B · A:\n{product_BA}")
 print("¿La propiedad es conmutativa?", np.array_equal(product_AB, product_BA))
+
+print(f"(A · B)^T:\n{transposed_product_AB}")
+print(f"B^T · A^T:\n{transposed_BA}")
+print("¿Se cumple la propiedad?", np.array_equal(transposed_product_AB, transposed_BA))
 
 # -------------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------------
