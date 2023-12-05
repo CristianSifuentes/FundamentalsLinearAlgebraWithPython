@@ -39,3 +39,31 @@ producto_cruz = np.cross(w, x)
 
 # Resultados
 print(f"Producto Cruz de w y x: {producto_cruz}")
+
+
+# Normas
+# Vector
+# v = np.array([3, -4])
+
+# Norma L1
+norm_l1 = np.linalg.norm(v, ord=1)
+
+# Norma L2 (por defecto)
+norm_l2 = np.linalg.norm(v)
+
+# Norma L0
+norm_l0 = np.linalg.norm(v, ord=0)
+
+# Norma al cuadrado (L2 al cuadrado)
+norm_squared = np.sum(v**2)
+
+# Norma infinito
+norm_inf = np.linalg.norm(v, ord=np.inf)
+
+# Resultados
+print(f"Vector: {v}")
+print(f"Norma L1: {norm_l1}")
+print(f"Norma L2: {norm_l2}")
+print(f"Norma L0: {norm_l0}")
+print(f"Norma al cuadrado: {norm_squared}")
+print(f"Norma infinito: {norm_inf}")
