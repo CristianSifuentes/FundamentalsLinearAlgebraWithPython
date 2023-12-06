@@ -81,3 +81,6 @@ print("¿La propiedad es conmutativa?", np.array_equal(product_AB, product_BA))
 print(f"(A · B)^T:\n{transposed_product_AB}")
 print(f"B^T · A^T:\n{transposed_BA}")
 print("¿Se cumple la propiedad?", np.array_equal(transposed_product_AB, transposed_BA))
+
+matriz = np.array([[1, 2, 3, 4] ,[5, 6, 7, 8] ,[9, 10, 11, 12]])
+print(matriz.T)

@@ -5,6 +5,10 @@ import numpy as np
 # Vectores
 u = np.array([2, 3])
 v = np.array([-1, 5])
+
+vector = np.array([1/2,1/2,1/2,1/2])
+
+vector2 =  np.array([-50,-25,0,25,100,-300])
 c = 2
 
 print(f"u.shape: {u.shape}")
@@ -67,3 +71,12 @@ print(f"Norma L2: {norm_l2}")
 print(f"Norma L0: {norm_l0}")
 print(f"Norma al cuadrado: {norm_squared}")
 print(f"Norma infinito: {norm_inf}")
+
+
+no = np.linalg.norm(vector)
+no2 = np.linalg.norm(vector2, ord=0)
+
+
+
+print(no)
+print(no2)
